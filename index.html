@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Medicio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <header> 
+            <nav class="navbar navbar-expand-md navbar-light bg-light  fixed-top " style="  height: 80px;opacity: 0.6;">
+            <div class="container-fluid ">
+            <a class="navbar-brand text-info m-3" href="#" id="logo">Medicio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active text-info" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="nav-link dropdown-toggle text-info border-2 border-info rounded-3" href="#"
+                    id="nav-Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Trips
+                    </button>
+                    <ul class="dropdown-menu mt-3  fade " aria-labelledby="nav-Dropdown">
+                    <li><a class="dropdown-item text-info" target="_blank" href="">Link</a></li>
+                    <li><a class="dropdown-item text-info" target="_blank" href="">Link</a></li>
+                    <li>
+                        <hr class="dropdown-divider bg-info">
+                    </li>
+                    <li><a class="dropdown-item text-info" target="_blank" href="">Link</a></li>
+                    <li><a class="dropdown-item text-info" target="_blank" href="">Link</a></li>
+                    <li><a class="dropdown-item text-info" target="_blank" href="">Link</a></li>
+                    <li><a class="dropdown-item text-info" target="_blank" href="">Link</a></li>
+                    <li><a class="dropdown-item text-info" target="_blank" href="">MORE ...</a></li>
+
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled text-info">About</a>
+                </li>
+                </ul>
+                <form class="d-flex">
+                <input class="form-control m-3 border-3 border-info rounded-3" type="search" placeholder="Search"
+                    aria-label="Search">
+
+                </form>
+                <form class="d-flex">
+                <button class=" navbtn btn bg-info text-white me-3 border-3 border-info rounded-3 shadow-lg"
+                    type="submit">Search</button>
+                <button class="navbtn btn bg-info text-white border-3 border-info rounded-3 shadow-lg" type="button"
+                    data-bs-toggle="modal" data-bs-target="#myModal">Login</button>
+                </form> <!-- /form -->
+            </div> <!-- /navbar-collapse -->
+
+            </div>
+            </nav>
+        </header>
+
+        <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header bg-info ">
+                <h5 class="modal-title text-light shadow-lg font-weight-bolder" id="staticBackdropLabel">Login</h5>
+                <button type="button" class="btn btn-close bg-light " data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- form -->
+                <form>
+                <div class="m-3">
+                    <label class="form-label text-info">Email address</label>
+                    <input type="email" class="form-control text-info border-3 border-info rounded-2"
+                    aria-describedby="emailHelp">
+                    <p class="form-text text-secondary">We'll never share your email with anyone else.</p>
+                </div>
+                <div class="m-3">
+                    <label class="form-label text-info">Password</label>
+                    <input type="password" class="form-control text-info border-3 border-info rounded-2">
+                </div>
+                <div class="m-3 form-check">
+                    <div class="form-check form-switch">
+                    <input class="form-check-input bg-info" type="checkbox" role="switch" checked>
+                    <label class="form-check-label text-info" for="flexSwitchCheckChecked">Remmember me</label>
+                    </div>
+                </div> <!-- /form check -->
+
+                </form>
+                <!-- /form -->
+                <div class="modal-footer d-flex  justify-content-between">
+                <button type="submit" class="btn btn-info text-light">Login</button>
+                <button type="button" class="btn btn-info text-light" data-bs-dismiss="modal">Close</button>
+                </div> <!-- /model-footer -->
+            </div> <!-- /model-body -->
+            </div> <!-- /modal-content -->
+        </div> <!-- /modal-dialog -->
+        </div>
+
+        <main>
+        <aside>
+            <div class="container-fluid p-0 " style="position: relative;">
+            <div class="d-flex flex-column justify-content-between ms-auto"
+            style="position: fixed;z-index: 90;top: 200px;right:20px;">
+            <div class="aside-icon "><a href="#"><i class="fab fa-facebook-square"></i></a></div>
+            <div class="aside-icon "><a href="#"><i class="fab fa-whatsapp-square"></i></a></div>
+            <div class="aside-icon "><a href="#"><i class="fab fa-twitter-square"></i></a></div>
+            <div class="aside-icon "><a href="#"><i class="fab fa-linkedin"></i></a></div>
+            <div class="aside-icon "><a href="#"><i class="fab fa-instagram-square"></i></a></div>
+            </div>
+        </aside>
+
+        <!-- Carousel -->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators ">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+
+        <section id="hero">
+            <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+            
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active" style="background-image: url(images_Bootstrap/img01.jpg)">
+                    <div class="container">
+                        <h2>Welcome to <span>Medicio</span></h2>
+                        <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel.</p>
+                        <a href="#" class="btn-get-started scrollto">Read More</a>
+                    </div>
+                    </div>
+            
+                    <!-- Slide 2 -->
+                    <div class="carousel-item" style="background-image: url(images_Bootstrap/img02.jpg)">
+                    <div class="container">
+                        <h2>Lorem Ipsum Dolor</h2>
+                        <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel.</p>
+                        <a href="#" class="btn-get-started scrollto">Read More</a>
+                    </div>
+                    </div>
+            
+                    <!-- Slide 3 -->
+                    <div class="carousel-item" style="background-image: url(images_Bootstrap/img03.jpg)">
+                    <div class="container">
+                        <h2>Sequi ea ut et est quaerat</h2>
+                        <p>Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel.</p>
+                        <a href="#" class="btn-get-started scrollto">Read More</a>
+                    </div>
+                    </div>
+            
+                </div>
+            </div>
+        </section>
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        </div>
+        <!-- /carousel -->
+        </main>
+        
+        <section id="cta" class="cta">
+            <div class="container" data-aos="zoom-in">
+                <div class="text-center">
+                    <h3>In an emergency? Need help now?</h3>
+                    <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <a class="cta-btn scrollto text-light" href="#appointment">Make an Make an Appointment</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>About Us</h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <img src="images_Bootstrap/about.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+                        <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+                        <p class="fst-italic">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.
+                        </p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                            <li><i class="fas fa-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                            <li><i class="fas fa-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                        </ul>
+                        <p>
+                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                            culpa qui officia deserunt mollit anim id est laborum
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="departments" class="departments">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Departments</h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+        
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                    <ul class="nav nav-tabs flex-column">
+                        <li class="nav-item">
+                        <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+                            <h4>Cardiology</h4>
+                            <p>Quis excepturi porro totam sint earum quo nulla perspiciatis eius.</p>
+                        </a>
+                        </li>
+                        <li class="nav-item mt-2">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+                            <h4>Neurology</h4>
+                            <p>Voluptas vel esse repudiandae quo excepturi.</p>
+                        </a>
+                        </li>
+                        <li class="nav-item mt-2">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+                            <h4>Hepatology</h4>
+                            <p>Velit veniam ipsa sit nihil blanditiis mollitia natus.</p>
+                        </a>
+                        </li>
+                        <li class="nav-item mt-2">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
+                            <h4>Pediatrics</h4>
+                            <p>Ratione hic sapiente nostrum doloremque illum nulla praesentium id</p>
+                        </a>
+                        </li>
+                    </ul>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="tab-content">
+                            <div class="tab-pane active show" id="tab-1">
+                            <h3>Cardiology</h3>
+                            <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                            <img src="images_Bootstrap/img05.jpg" alt="" class="img-fluid">
+                            <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+                            </div>
+                            <div class="tab-pane" id="tab-2">
+                            <h3>Neurology</h3>
+                            <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                            <img src="images_Bootstrap/img06.jpg" alt="" class="img-fluid">
+                            <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+                            </div>
+                            <div class="tab-pane" id="tab-3">
+                            <h3>Hepatology</h3>
+                            <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                            <img src="images_Bootstrap/img07.jpg" alt="" class="img-fluid">
+                            <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+                            </div>
+                            <div class="tab-pane" id="tab-4">
+                            <h3>Pediatrics</h3>
+                            <p class="fst-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                            <img src="images_Bootstrap/img08.jpg" alt="" class="img-fluid">
+                            <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="appointment" class="appointment section-bg">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Make an Appointment</h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+        
+                <form>
+                    <div class="row">
+                        <div class="col-md-4 form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" >
+                        </div>
+                        <div class="col-md-4 form-group mt-3 mt-md-0">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" >
+                        </div>
+                        <div class="col-md-4 form-group mt-3 mt-md-0">
+                            <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" >
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 form-group mt-3">
+                            <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" >
+                        </div>
+                        <div class="col-md-4 form-group mt-3">
+                            <select name="department" id="department" class="form-select">
+                            <option value="">Select Department</option>
+                            <option value="Department 1">Department 1</option>
+                            <option value="Department 2">Department 2</option>
+                            <option value="Department 3">Department 3</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 form-group mt-3">
+                            <select name="doctor" id="doctor" class="form-select">
+                            <option value="">Select Doctor</option>
+                            <option value="Doctor 1">Doctor 1</option>
+                            <option value="Doctor 2">Doctor 2</option>
+                            <option value="Doctor 3">Doctor 3</option>
+                            </select>
+                        </div>
+                    </div>
+        
+                    <div class="form-group mt-3">
+                        <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)" id="text"></textarea>
+                    </div>
+                    <div class="row">
+                        <a class="col-md-4 form-group"  href="https://translate.google.com.eg/?hl=en" target="_blank">
+                            <button type="button">Translate From Arabic To English</button>
+                        </a>
+                        <a class="col-md-4 form-group"  href="https://translate.google.com.eg/?hl=en&sl=ar&tl=fr&op=translate" target="_blank">
+                            <button type="button">Translate From Arabic To Frensh</button>
+                        </a>
+                        <a class="col-md-4 form-group" href="https://translate.google.com.eg/?hl=en&sl=ar&tl=de&op=translate" target="_blank">
+                            <button type="button">Translate From Arabic To German</button>
+                        </a>
+                    </div>
+
+                    <div class="text-center"> 
+                        <button
+                        onclick="copyMessage()" id="btnCopy">
+                        Copy Message
+                        </button>
+                        <button type="submit">Make an Appointment</button>
+                    </div>
+                </form>
+        
+            </div>
+        </section>
+
+
+        <section class="fixed-img fixed-image1">
+        </section>
+
+
+        <section id="services" class="services services">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Services</h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+        
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="icon card"><i class="fas fa-heartbeat"></i></div>
+                        <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+                        <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="icon"><i class="fas fa-pills"></i></div>
+                        <h4 class="title"><a href="">Dolor Sitema</a></h4>
+                        <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="icon"><i class="fas fa-hospital-user"></i></div>
+                        <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+                        <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="icon"><i class="fas fa-dna"></i></div>
+                        <h4 class="title"><a href="">Magni Dolores</a></h4>
+                        <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="icon"><i class="fas fa-wheelchair"></i></div>
+                        <h4 class="title"><a href="">Nemo Enim</a></h4>
+                        <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                    </div>
+                        <div class="col-lg-4 col-md-6 icon-box" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="icon"><i class="fas fa-notes-medical"></i></div>
+                    <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+                    <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+                    </div>
+                </div>
+      
+            </div>
+        </section>
+
+
+
+        <section class="doctors">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Doctors</h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card text-bg-dark border-0 position-relative spicalCard">
+                            <img src="images_Bootstrap/img15.jpg" class="card-img" alt="..." style="min-height: 450px;">
+                            <div class="card-img-overlay bg-secondary bg-opacity-75">
+                              <h5 class="card-title"><a href="#">All thanks and appreciation</a></h5>
+                              <p class="card-text"><i class="fas fa-calendar-alt mr-2"></i> October 15, 2020</p>
+                            <div class="card-footer align-bottom d-flex align-items-center position-absolute bottom-0 start-0">
+                                <div class="img me-1">
+                                    <img src="images_Bootstrap/img15.jpg" alt="" width="80px" height="80px">
+                                </div>
+                                <div class="des">
+                                    <h2 class="fa-1x">Walter White</h2>
+                                    <p class="small">Chief Medical Officer</p>
+                                </div>
+                            </div>
+                        </div>
+                            
+                          </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card text-bg-dark border-0 position-relative spicalCard">
+                            <img src="images_Bootstrap/img16.jpg" class="card-img" alt="..." style="min-height: 450px;">
+                            <div class="card-img-overlay bg-secondary bg-opacity-75">
+                              <h5 class="card-title"><a href="#">All thanks and appreciation</a></h5>
+                              <p class="card-text"><i class="fas fa-calendar-alt mr-2"></i> October 15, 2020</p>
+                            <div class="card-footer align-bottom d-flex align-items-center position-absolute bottom-0 start-0">
+                                <div class="img me-1">
+                                    <img src="images_Bootstrap/img16.jpg" alt="" width="80px" height="80px">
+                                </div>
+                                <div class="des">
+                                    <h2 class="fa-1x">Walter White</h2>
+                                    <p class="small">Chief Medical Officer</p>
+                                </div>
+                            </div>
+                        </div>
+                            
+                          </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card text-bg-dark border-0 position-relative spicalCard">
+                            <img src="images_Bootstrap/img17.jpg" class="card-img" alt="..." style="min-height: 450px;">
+                            <div class="card-img-overlay bg-secondary bg-opacity-75">
+                              <h5 class="card-title"><a href="#">All thanks and appreciation</a></h5>
+                              <p class="card-text"><i class="fas fa-calendar-alt mr-2"></i> October 15, 2020</p>
+                            <div class="card-footer align-bottom d-flex align-items-center position-absolute bottom-0 start-0">
+                                <div class="img me-1">
+                                    <img src="images_Bootstrap/img17.jpg" alt="" width="80px" height="80px">
+                                </div>
+                                <div class="des">
+                                    <h2 class="fa-1x">Walter White</h2>
+                                    <p class="small">Chief Medical Officer</p>
+                                </div>
+                            </div>
+                        </div>
+                            
+                          </div>
+                    </div>
+        
+                </div> 
+        
+            </div>
+        </section>
+
+        <section id="faq" class="faq section-bg">
+            <div class="container" data-aos="fade-up">
+      
+                <div class="section-title">
+                    <h2>Frequently Asked Questioins</h2>
+                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                </div>
+        
+                <ul class="faq-list">
+        
+                    <li>
+                    <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                    <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                        Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                        </p>
+                    </div>
+                    </li>
+        
+                    <li>
+                    <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                    <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                        </p>
+                    </div>
+                    </li>
+        
+                    <li>
+                    <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                    <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                        Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                        </p>
+                    </div>
+                    </li>
+        
+                    <li>
+                    <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                    <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                        Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                        </p>
+                    </div>
+                    </li>
+        
+                    <li>
+                    <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                    <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                        Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+                        </p>
+                    </div>
+                    </li>
+        
+                    <li>
+                    <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                    <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                        Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+                        </p>
+                    </div>
+                    </li>
+        
+                </ul>
+        
+            </div>
+        </section>
+
+
+
+        <section class="container light"> 
+            <div class="container py-2">
+                <div class="section-title">
+                    <h2>Medicio News</h2>
+                </div>
+                <article class="postcard d-flex light blue"> 
+                    <a class="postcard__img_link" href="#">
+                    <img class="postcard__img" src="images_Bootstrap/img20.jpg" alt="Image Title" />
+                    </a>
+                    <div class="postcard__text t-dark">
+                    <h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
+                    <div class="postcard__subtitle small">
+                        <time datetime="2020-05-25 12:00:00">
+                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                        </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat
+                        asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo
+                        accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo
+                        iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                    <ul class="postcard__tagbox">
+                        <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                        <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                        <li class="tag__item play blue">
+                        <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                        </li>
+                    </ul>
+                    </div>
+                </article>
+                <article class="postcard d-flex light red"> 
+                    <a class="postcard__img_link" href="#">
+                    <img class="postcard__img" src="images_Bootstrap/img21.jpg" alt="Image Title" />
+                    </a>
+                    <div class="postcard__text t-dark">
+                    <h1 class="postcard__title red"><a href="#">Podcast Title</a></h1>
+                    <div class="postcard__subtitle small">
+                        <time datetime="2020-05-25 12:00:00">
+                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                        </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat
+                        asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo
+                        accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo
+                        iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                    <ul class="postcard__tagbox">
+                        <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                        <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                        <li class="tag__item play red">
+                        <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                        </li>
+                    </ul>
+                    </div>
+                </article>
+                <article class="postcard d-flex  light green"> 
+                    <a class="postcard__img_link" href="#">
+                    <img class="postcard__img" src="images_Bootstrap/img22.jpg" alt="Image Title" />
+                    </a>
+                    <div class="postcard__text t-dark">
+                    <h1 class="postcard__title green"><a href="#">Podcast Title</a></h1>
+                    <div class="postcard__subtitle small">
+                        <time datetime="2020-05-25 12:00:00">
+                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                        </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat
+                        asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo
+                        accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo
+                        iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                    <ul class="postcard__tagbox">
+                        <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                        <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                        <li class="tag__item play green">
+                        <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                        </li>
+                    </ul>
+                    </div>
+                </article>
+                <article class="postcard d-flex light yellow "> 
+                    <a class="postcard__img_link" href="#">
+                    <img class="postcard__img" src="images_Bootstrap/img23.jpg" alt="Image Title" />
+                    </a>
+                    <div class="postcard__text t-dark">
+                    <h1 class="postcard__title yellow"><a href="#">Podcast Title</a></h1>
+                    <div class="postcard__subtitle small">
+                        <time datetime="2020-05-25 12:00:00">
+                        <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+                        </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat
+                        asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo
+                        accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo
+                        iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                    <ul class="postcard__tagbox">
+                        <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+                        <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+                        <li class="tag__item play yellow">
+                        <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+                        </li>
+                    </ul>
+                    </div>
+                </article> 
+            </div> 
+        </section>
+
+
+        <footer id="footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+            
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-info">
+                        <h3>Medicio</h3>
+                        <p>
+                            A108 Adam Street <br>
+                            NY 535022, USA<br><br>
+                            <strong>Phone:</strong> +1 5589 55488 55<br>
+                            <strong>Email:</strong> mennasolimanali2@gmailcom <br></p>
+                        <div class="social-links mt-3">
+                            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="google-plus"><i class="fab fa-google-plus"></i></a>
+                            <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div>
+            
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                        </ul>
+                    </div>
+            
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Our Newsletter</h4>
+                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                        <form action="" method="post">
+                        <input type="email" name="email"><input type="submit" value="Subscribe">
+                        </form>
+            
+                    </div>
+            
+                    </div>
+                </div>
+                </div>
+            
+                <div class="container">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Medicio</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                Designed by <a href="https://www.linkedin.com/in/menna-soliman-7a6124251/">Menna Soliman</a>
+                </div>
+            </div>
+        </footer>
+
+        <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
